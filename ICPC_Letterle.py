@@ -1,6 +1,6 @@
-def letterle():
+def letterle(letterle):
 
-  letterle = input('Enter the 5 letter combination: ').upper()
+  # letterle = input('Enter the 5 letter combination: ').upper()
   mydict={}
   for letter in letterle:
     if(letter in mydict):
@@ -10,6 +10,7 @@ def letterle():
 
   #USER GETS 7 guesses
   for i in range(7):
+    print("\nTry", str(i+1) + ":")
     feedback = ["X","X","X","X","X"]
     tempdict={}
     #USER GUESS
@@ -18,7 +19,8 @@ def letterle():
 
     #Correct guess
     if guess == letterle:
-      return "WINNER"
+      print('GGGGG')
+      return "\nWINNER"
 
   
       
@@ -43,4 +45,4 @@ def letterle():
     print("".join(feedback))
 
   return "LOSER"
-print(letterle())
+print(letterle('GUESS'))
